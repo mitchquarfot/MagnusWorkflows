@@ -1,4 +1,9 @@
 workflowId: myFirstWorkflow
 owner: mquarfot@gmail.com
-comment: first commit
+comment: update lifetime and run schedule
+lifetime:
+  endDate: '2024-06-01'
+  startDate: '2024-03-08'
+qCron: 0 0 5 ? * *
+schedule: Each Day @ 05
 timeZone: UTC
