@@ -1,9 +1,25 @@
 workflowId: myFirstWorkflow
 owner: mquarfot@gmail.com
-comment: update lifetime and run schedule
+comment: |-
+  ---- auto-generated ----
+  -Task added: select_star
 lifetime:
   endDate: '2024-06-01'
   startDate: '2024-03-08'
 qCron: 0 0 5 ? * *
 schedule: Each Day @ 05
 timeZone: UTC
+tasks:
+
+- name: select_star
+  type: bq_query
+  cacheResults: false
+  dest: google_drive.fyllo_verano_modeled_visitation_by_aoid_4_9_5_31_verano_aoid_modeled_visits
+  executionModeSync: false
+  query: |-
+    select *
+    from `bustling-walker-416522.google_drive.fyllo_verano_modeled_visitation_by_aoid_4_9_5_31_verano_aoid_modeled_visits`
+  sqlLegacy: false
+
+topLevelTaskNames:
+- select_star
